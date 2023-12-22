@@ -4,5 +4,4 @@ INSERT INTO compras(compras_id, usuario_id, fecha_compra, estado_id) VALUES (02,
 INSERT INTO compras(compras_id, usuario_id, fecha_compra, estado_id) VALUES (09, 9, "2023-12-03", 2);
 INSERT INTO compras(compras_id, usuario_id, fecha_compra, estado_id) VALUES (14, 10, "2023-12-14", 4);
 
-
 select * from compras;
