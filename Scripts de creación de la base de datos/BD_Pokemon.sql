@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `pokemon_place`.`usuarios` (
   `usuario_id` BIGINT NOT NULL AUTO_INCREMENT,
   `usuario_nombre` VARCHAR(120) NOT NULL,
   `email` VARCHAR(60) NOT NULL,
-  `telefono` VARCHAR(15) NOT NULL,
+  `telefono` VARCHAR(20) NOT NULL,
   `contrasena` VARCHAR(20) NOT NULL,
   `direccion` VARCHAR(150) NULL,
   `rol_id` BIGINT NOT NULL,
