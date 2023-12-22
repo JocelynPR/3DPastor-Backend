@@ -13,11 +13,13 @@ insert into usuarios(usuario_nombre, email, telefono, contrasena, rol_id)
 insert into usuarios(usuario_nombre, email, telefono, contrasena, rol_id)
   values ("Jorge Alberto Ramirez Casillas", "jorgermzc16@gmail.com", "3311389817", "ivysur987", 1);
 
-insert into usuarios (usuario_nombre, email, telefono, contrasena, rol_id)
-  values ("Ana María Pérez", "anamaria@gmail.com", "+52 3334567890", "clave123", 2);
-insert into usuarios (usuario_nombre, email, telefono, contrasena, rol_id)
-  values ("Carlos González Rodriguez", "carlos.gonzalez@gmail.com", "+52 1 3356789012", "password456", 2);
-insert into usuarios (usuario_nombre, email, telefono, contrasena, rol_id)
-  values ("Laura Martínez Silva", "laura.martinez@outlook.com", "3389012345", "securepass789", 2);
-insert into usuarios (usuario_nombre, email, telefono, contrasena, rol_id)
-  values ("Jose Avila Camacho", "avila.jose@yahoo.com", "+52 3389012345", "securepass789", 2);
+insert into usuarios (usuario_nombre, email, telefono, contrasena, direccion, rol_id)
+  values ("Ana María Pérez", "anamaria@gmail.com", "+52 3334567890", "clave123", "Roles de Canela 24", 2);
+insert into usuarios (usuario_nombre, email, telefono, contrasena, direccion, rol_id)
+  values ("Carlos González Rodriguez", "carlos.gonzalez@gmail.com", "+52 1 3356789012", "password456", "Hola Sol 2", 2);
+insert into usuarios (usuario_nombre, email, telefono, contrasena, direccion, rol_id)
+  values ("Laura Martínez Silva", "laura.martinez@outlook.com", "3389012345", "securepass789", "Quiero unos chicles 989", 2);
+insert into usuarios (usuario_nombre, email, telefono, contrasena, direccion, rol_id)
+  values ("Jose Avila Camacho", "avila.jose@yahoo.com", "+52 3389012345", "securepass789", "Avila Camacho 22", 2);
+  
+SELECT * FROM usuarios;

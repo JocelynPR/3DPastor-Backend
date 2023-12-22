@@ -120,3 +120,5 @@ INSERT INTO imagenes_productos (nombre_imagen, producto_id)
 		("20231205_162702.png", 79),
 		("20231205_162708.png", 81),
 		("20231205_162727.png", 82);
+        
+SELECT * FROM imagenes_productos;

@@ -1,7 +1,5 @@
-SELECT * FROM pokemon_place.categorias;
-
 INSERT INTO categorias (categoria_id, nombre_categoria) 
-VALUES ( 1, "Productos oficial");
+VALUES ( 1, "Producto Oficial");
 
 INSERT INTO categorias (categoria_id, nombre_categoria) 
 VALUES ( 2, "Accesorios");
@@ -17,3 +15,5 @@ VALUES ( 5, "Juegos de Mesa");
 
 INSERT INTO categorias (categoria_id, nombre_categoria) 
 VALUES ( 6, "Otros");
+
+SELECT * FROM categorias;

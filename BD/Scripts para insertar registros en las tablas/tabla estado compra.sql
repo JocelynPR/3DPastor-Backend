@@ -4,3 +4,5 @@ INSERT INTO estado_compra (estado_id, estado_compra) VALUES (3, "Enviado");
 INSERT INTO estado_compra (estado_id, estado_compra) VALUES (4, "Entregado");
 INSERT INTO estado_compra (estado_id, estado_compra) VALUES (5, "Cancelado");
 INSERT INTO estado_compra (estado_id, estado_compra) VALUES (6, "Con problema");
+
+SELECT * FROM estado_compra;
