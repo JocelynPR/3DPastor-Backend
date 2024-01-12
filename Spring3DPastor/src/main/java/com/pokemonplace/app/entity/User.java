@@ -25,6 +25,6 @@ public class User {
 	private String password;
 	@Column(name= "direccion", length= 150)
 	private String address;
-	
-	
+	@Column(name= "rol_id", nullable= false)
+	private long roleId = 2;
 }
