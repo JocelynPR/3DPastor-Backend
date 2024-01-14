@@ -1,5 +1,7 @@
 package com.pokemonplace.app.service;
 
+import java.util.List;
+
 import com.pokemonplace.app.entity.User;
 
 public interface UserService {
@@ -9,5 +11,7 @@ public interface UserService {
 	User createUser(User user);
 	User updateUser(User user, Long id);
 	void deleteUser(Long id);
+	// Modifications getAllUsers()
+	List<User> getAllUsers();
 	
 }

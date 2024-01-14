@@ -48,7 +48,4 @@ public class UserController{
 		userService.deleteUser(id);
 		return "Se eliminó el usuario con el id= " +id;
 	}
-	
-	
-	
 }

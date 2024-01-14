@@ -1,5 +1,6 @@
 package com.pokemonplace.app.service.imp;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +33,7 @@ public class UserServiceImp implements UserService {
 	@Override
 	public User createUser(User user) {
 		user.setId(null);
+		user.setActive(true);
 		User newUser = userRepository.save(user);
 		return newUser;
 	}
@@ -52,4 +54,10 @@ public class UserServiceImp implements UserService {
 		userRepository.delete(existingUser);
 	}
 	
+	// Modifications
+	@Override
+	public List<User> getAllUsers(){
+		List<User> users = (List<User>) userRepository.findAllByActive(true);
+		return users;
+	}
 }

@@ -27,4 +27,8 @@ public class User {
 	private String address;
 	@Column(name= "rol_id", nullable= false)
 	private long roleId = 2;
+	
+	// Modifications 
+	@Column(name= "activo", nullable= false)
+	private boolean active;
 }
