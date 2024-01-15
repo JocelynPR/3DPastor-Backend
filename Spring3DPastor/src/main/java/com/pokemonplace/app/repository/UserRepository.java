@@ -9,6 +9,6 @@ import com.pokemonplace.app.entity.User;
 public interface UserRepository extends CrudRepository<User, Long>{
 	
 	Optional<User>findByEmail(String email);
-	// Modifications
+	// Modifications 1
 	Iterable<User> findAllByActive(boolean state);
 }

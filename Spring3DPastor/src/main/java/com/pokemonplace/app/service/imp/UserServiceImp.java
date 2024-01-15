@@ -54,10 +54,17 @@ public class UserServiceImp implements UserService {
 		userRepository.delete(existingUser);
 	}
 	
-	// Modifications
+	// Modifications 1
 	@Override
 	public List<User> getAllUsers(){
 		List<User> users = (List<User>) userRepository.findAllByActive(true);
 		return users;
+	}
+	
+	@Override
+	public void deactivateUser(Long id) {
+		User existingUser = getUserById(id);
+		existingUser.setActive(false);
+		userRepository.save(existingUser);	
 	}
 }

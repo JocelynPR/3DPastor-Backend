@@ -1,5 +1,7 @@
 package com.pokemonplace.app.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,6 +19,13 @@ public class UserController{
 	
 	@Autowired
 	UserService userService;
+	
+	// Modifications 1
+	@GetMapping
+	List<User> getAllUsers(){
+		List<User> users = userService.getAllUsers();
+		return users;
+	}
 	
 	@GetMapping("{id}")
 	User getUserById(@PathVariable(name= "id") Long id) {
@@ -47,5 +56,14 @@ public class UserController{
 	String deleteUser(@PathVariable("id") Long id){
 		userService.deleteUser(id);
 		return "Se eliminó el usuario con el id= " +id;
+	}
+	
+	// Modifications 1
+	// Para verificarlo en Postman, elegir PUT y la siguiente ruta
+	// http://localhost:8080/api/v1/users/{id}/deactivate
+	@PutMapping("{id}/deactivate")
+	String deactivateUser(@PathVariable("id") Long id) {
+		userService.deactivateUser(id);
+		return "Se desactivo el usuario con el id= " +id;
 	}
 }

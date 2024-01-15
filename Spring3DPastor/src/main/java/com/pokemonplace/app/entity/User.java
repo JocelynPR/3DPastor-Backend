@@ -28,7 +28,13 @@ public class User {
 	@Column(name= "rol_id", nullable= false)
 	private long roleId = 2;
 	
-	// Modifications 
+	// Modifications 1
 	@Column(name= "activo", nullable= false)
 	private boolean active;
+	
+	// Modifications 2
+	//@ManyToOne
+	//@JoinColumn(name = "rol_id", nullable= false)
+	//private Role role;
+	
 }
