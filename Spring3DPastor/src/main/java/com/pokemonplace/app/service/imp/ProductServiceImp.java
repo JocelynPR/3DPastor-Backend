@@ -1,5 +1,6 @@
 package com.pokemonplace.app.service.imp;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +36,12 @@ public class ProductServiceImp implements ProductService{
 		product.setId(null);
 		Product newProduct = productRepository.save(product);
 		return newProduct;
+	}
+	
+	@Override
+	public List<Product> getAllProducts() {
+		List <Product> products = (List<Product>) productRepository.findAllByActive(true);
+		return products;
 	}
 
 	@Override
