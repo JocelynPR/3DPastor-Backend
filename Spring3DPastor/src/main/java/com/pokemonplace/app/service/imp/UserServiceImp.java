@@ -49,12 +49,15 @@ public class UserServiceImp implements UserService {
 	}
 
 	@Override
+<<<<<<< HEAD
 	public void deleteUser(Long id) {
 		User existingUser = getUserById(id);
 		userRepository.delete(existingUser);
 	}
 	
 	@Override
+=======
+>>>>>>> 6c328793719bf890924f4f999b8f8ddbdcb4e522
 	public List<User> getAllUsers(){
 		List<User> users = (List<User>) userRepository.findAllByActive(true);
 		return users;
