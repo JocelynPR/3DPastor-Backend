@@ -47,6 +47,11 @@ public class UserController{
 		return userService.getUserByEmail(email);
 	}
 	
+	@PutMapping("{id}")
+	User updateUser(@RequestBody User user, @PathVariable("id") Long id){
+		return userService.updateUser(user, id);
+	}
+	
 	// Modifications 1
 	// Para verificarlo en Postman, elegir PUT y la siguiente ruta
 	// http://localhost:8080/api/v1/users/{id}/deactivate
@@ -55,4 +60,5 @@ public class UserController{
 		userService.deactivateUser(id);
 		return "Se desactivo el usuario con el id= " +id;
 	}
+
 }

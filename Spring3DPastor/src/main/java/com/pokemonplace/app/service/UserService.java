@@ -12,5 +12,6 @@ public interface UserService {
 	User updateUser(User user, Long id);
 	List<User> getAllUsers();
 	void deactivateUser(Long id);
+	void reactivateUser(String email);
 	
 }

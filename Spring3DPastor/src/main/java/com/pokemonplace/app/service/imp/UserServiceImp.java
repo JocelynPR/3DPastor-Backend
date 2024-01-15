@@ -60,4 +60,11 @@ public class UserServiceImp implements UserService {
 		existingUser.setActive(false);
 		userRepository.save(existingUser);	
 	}
+
+	@Override
+	public void reactivateUser(String email) {
+		User existingUser = getUserByEmail(email);
+		existingUser.setActive(true);
+		userRepository.save(existingUser);
+	}
 }

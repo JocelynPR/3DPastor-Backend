@@ -13,4 +13,5 @@ public interface UserDtoService {
 	UserDto updateUser(User user, Long id);
 	List<UserDto> getAllUsers();
 	void deactivateUser(Long id);
+	void reactivateUser(String email);
 }

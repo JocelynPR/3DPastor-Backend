@@ -57,6 +57,11 @@ public class UserDtoServiceImp implements UserDtoService{
 		userService.deactivateUser(id);
 	}
 
+	@Override
+	public void reactivateUser(String email) {
+		userService.reactivateUser(email);
+	}
+	
 	private UserDto userToUserDto(User user) {
 		UserDto userDto = new UserDto();
 		userDto.setId(user.getId());
@@ -65,4 +70,6 @@ public class UserDtoServiceImp implements UserDtoService{
 		userDto.setPhone(user.getPhone());
 		return userDto;
 	}
+
+
 }
