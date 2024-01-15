@@ -44,9 +44,9 @@ public class UserDtoController {
 		UserDto userDto = userDtoService.updateUser(user, id);
 		return new ResponseEntity<>(userDto, HttpStatus.OK);
 	}
-	@DeleteMapping("{id}")
+	@PutMapping("{id}/deactivate")
 	ResponseEntity<String> deleteUser(@PathVariable("id")Long id) {
 		userDtoService.deactivateUser(id);
-		return new ResponseEntity<>("Üser id " + id + " successfully deleted", HttpStatus.OK);
+		return new ResponseEntity<>("Üser id " + id + " deactivated ", HttpStatus.OK);
 	}
 }
