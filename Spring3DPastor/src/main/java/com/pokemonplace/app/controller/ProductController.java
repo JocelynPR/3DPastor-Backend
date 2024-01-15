@@ -56,4 +56,10 @@ public class ProductController {
 		productService.deleteProduct(id);
 		return "Se eliminó el producto con el id= " + id;
 	}
+	
+	@PutMapping("{id}/deactivate")
+	String deactivateProduct(@PathVariable("id") Long id) {
+		productService.deactivateProduct(id);
+		return "Se desactivó el producto con id " + id;
+	}
 }

@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.*;
 
 import com.pokemonplace.app.entity.Image;
 import com.pokemonplace.app.service.ImageService;
+import com.pokemonplace.app.service.UserService;
 
 import lombok.extern.log4j.Log4j2;
 
@@ -48,4 +49,10 @@ public class ImageController {
 		return "Se eliminó la imagen con el id " + imageId;
 	}
 
+	@PutMapping("{imageId}/deactivate")
+	String deactivateImage(@PathVariable("imageId") Long imageId) {
+		imageService.deactivateImage(imageId);
+		return "Se desactivó la imagen con el id " + imageId;
+	}
+			
 }

@@ -24,5 +24,6 @@ public class Product {
 	private Long category;
 	@Column(name="cantidad_disponible", nullable= false)
 	private long cuantity;
-
+	@Column (name="activo", nullable= false)
+	private boolean active;
 }

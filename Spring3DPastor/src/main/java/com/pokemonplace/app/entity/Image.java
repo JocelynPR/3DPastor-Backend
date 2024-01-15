@@ -19,4 +19,6 @@ public class Image {
 	private String imageName;
 	@Column( name = "producto_id", nullable = false )
 	private Long productId;
+	@Column( name = "activo", nullable = false )
+	private boolean active;
 }
