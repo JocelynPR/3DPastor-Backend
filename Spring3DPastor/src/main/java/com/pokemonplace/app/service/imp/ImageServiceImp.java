@@ -40,7 +40,7 @@ public class ImageServiceImp implements ImageService {
 	public Image updateImage(Image image, Long imageId) {
 		Image existingImage = getImageByImageId(imageId);
 		existingImage.setImageName(image.getImageName());
-		existingImage.setProductId(image.getProductId());
+		existingImage.setProduct(image.getProduct());
 		return imageRepository.save(existingImage);
 	}
 

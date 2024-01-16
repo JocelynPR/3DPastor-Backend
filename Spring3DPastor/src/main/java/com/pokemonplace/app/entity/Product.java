@@ -1,5 +1,9 @@
 package com.pokemonplace.app.entity;
 
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -20,11 +24,16 @@ public class Product {
 	private String nameProduct;
 	@Column(name="precio", nullable= false)
 	private float price;
-	@Column(name="categoria_id", nullable= false)
-	private Long category;
+	@ManyToOne
+	@JoinColumn(name="categoria_id", nullable= false)
+	@JsonIgnoreProperties("categoryId")
+	private Category category;
 	@Column(name="cantidad_disponible", nullable= false)
-	private long cuantity;
+	private Long qty;
 	@Column(name="activo", nullable=false)
 	private boolean active = true;
+	@OneToMany(mappedBy = "product")
+	@JsonIgnoreProperties({"imageId", "product"})
+	private List<Image> images;
 
 }

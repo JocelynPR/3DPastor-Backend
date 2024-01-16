@@ -1,5 +1,7 @@
 package com.pokemonplace.app.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -17,6 +19,8 @@ public class Image {
 	private Long imageId;
 	@Column( name = "nombre_imagen", nullable = false, length = 120 )
 	private String imageName;
-	@Column( name = "producto_id", nullable = false )
-	private Long productId;
+	@ManyToOne
+	@JoinColumn( name = "producto_id", nullable = false )
+	@JsonIgnoreProperties({"id", "active", "images"})
+	private Product product;
 }
