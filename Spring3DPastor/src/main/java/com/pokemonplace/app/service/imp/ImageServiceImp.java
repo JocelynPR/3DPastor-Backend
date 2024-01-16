@@ -46,12 +46,6 @@ public class ImageServiceImp implements ImageService {
 	}
 
 	@Override
-	public void deleteImage(Long imageId) {
-		Image existingImage = getImageByImageId(imageId);
-		imageRepository.delete(existingImage);
-		
-	}
-	@Override
 	public void deactivateImage(Long imageId) {
 		Image existingImage = getImageByImageId(imageId);
 		existingImage.setActive(false);

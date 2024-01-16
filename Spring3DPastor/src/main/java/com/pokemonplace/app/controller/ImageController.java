@@ -43,12 +43,6 @@ public class ImageController {
 		return imageService.updateImage(image, imageId);
 	}
 	
-	@DeleteMapping("{imageId}")
-	String deleteImage(@PathVariable("imageId") Long imageId) {
-		imageService.deleteImage(imageId);
-		return "Se eliminó la imagen con el id " + imageId;
-	}
-
 	@PutMapping("{imageId}/deactivate")
 	String deactivateImage(@PathVariable("imageId") Long imageId) {
 		imageService.deactivateImage(imageId);

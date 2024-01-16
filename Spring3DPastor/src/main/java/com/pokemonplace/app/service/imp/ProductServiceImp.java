@@ -57,12 +57,6 @@ public class ProductServiceImp implements ProductService{
 	}
 
 	@Override
-	public void deleteProduct(Long id) {
-		Product existingProduct = getProductById(id);
-		productRepository.delete(existingProduct);
-	}
-	
-	@Override
 	public void deactivateProduct(Long id) {
 		Product existingProduct = getProductById(id);
 		existingProduct.setActive(false);

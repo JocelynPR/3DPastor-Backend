@@ -8,6 +8,5 @@ public interface ImageService {
 	Image getImageByImageName(String imageName);
 	Image createImage(Image image);
 	Image updateImage(Image image, Long imageId);
-	void deleteImage(Long imageId);
 	void deactivateImage(Long imageId);
 }
