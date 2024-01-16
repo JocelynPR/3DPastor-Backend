@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.pokemonplace.app.entity.Image;
 import com.pokemonplace.app.repository.ImageRepository;
-import com.pokemonplace.app.repository.UserRepository;
 import com.pokemonplace.app.service.ImageService;
 
 @Service

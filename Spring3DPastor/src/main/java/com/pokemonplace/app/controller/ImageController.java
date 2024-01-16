@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.*;
 
 import com.pokemonplace.app.entity.Image;
 import com.pokemonplace.app.service.ImageService;
-import com.pokemonplace.app.service.UserService;
 
 import lombok.extern.log4j.Log4j2;
 
