@@ -47,14 +47,7 @@ public class UserServiceImp implements UserService {
 		existingUser.setPhone(user.getPhone());
 		return userRepository.save(existingUser);
 	}
-
-	@Override
-	public void deleteUser(Long id) {
-		User existingUser = getUserById(id);
-		userRepository.delete(existingUser);
-	}
 	
-	// Modifications 1
 	@Override
 	public List<User> getAllUsers(){
 		List<User> users = (List<User>) userRepository.findAllByActive(true);
@@ -66,5 +59,12 @@ public class UserServiceImp implements UserService {
 		User existingUser = getUserById(id);
 		existingUser.setActive(false);
 		userRepository.save(existingUser);	
+	}
+
+	@Override
+	public void reactivateUser(String email) {
+		User existingUser = getUserByEmail(email);
+		existingUser.setActive(true);
+		userRepository.save(existingUser);
 	}
 }

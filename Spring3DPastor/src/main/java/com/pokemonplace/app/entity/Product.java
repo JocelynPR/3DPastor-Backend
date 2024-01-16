@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
 
+
 @Setter
 @Getter
 @ToString
@@ -35,5 +36,4 @@ public class Product {
 	@OneToMany(mappedBy = "product")
 	@JsonIgnoreProperties({"imageId", "product"})
 	private List<Image> images;
-
 }

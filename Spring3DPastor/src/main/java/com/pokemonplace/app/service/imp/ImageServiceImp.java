@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.pokemonplace.app.entity.Image;
 import com.pokemonplace.app.repository.ImageRepository;
+import com.pokemonplace.app.repository.UserRepository;
 import com.pokemonplace.app.service.ImageService;
 
 @Service
@@ -45,10 +46,9 @@ public class ImageServiceImp implements ImageService {
 	}
 
 	@Override
-	public void deleteImage(Long imageId) {
+	public void deactivateImage(Long imageId) {
 		Image existingImage = getImageByImageId(imageId);
-		imageRepository.delete(existingImage);
-		
+		existingImage.setActive(false);
+		imageRepository.save(existingImage);
 	}
-
 }

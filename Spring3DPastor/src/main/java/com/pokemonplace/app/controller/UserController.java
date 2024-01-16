@@ -52,18 +52,14 @@ public class UserController{
 		return userService.updateUser(user, id);
 	}
 	
-	@DeleteMapping("{id}")
-	String deleteUser(@PathVariable("id") Long id){
-		userService.deleteUser(id);
-		return "Se eliminó el usuario con el id= " +id;
-	}
-	
 	// Modifications 1
 	// Para verificarlo en Postman, elegir PUT y la siguiente ruta
 	// http://localhost:8080/api/v1/users/{id}/deactivate
+
 	@PutMapping("{id}/deactivate")
 	String deactivateUser(@PathVariable("id") Long id) {
 		userService.deactivateUser(id);
-		return "Se desactivo el usuario con el id= " +id;
+		return "Se desactivó el usuario con el id= " +id;
 	}
+
 }

@@ -52,7 +52,7 @@ public class ProductDtoServiceImp implements ProductDtoService {
 	
 	@Override
 	public void deleteProduct(Long id) {
-		productService.deleteProduct(id);
+		productService.deactivateProduct(id);
 	}
 	
 	private ProductDto productToProductDto(Product product) {

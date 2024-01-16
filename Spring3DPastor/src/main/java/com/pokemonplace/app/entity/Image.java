@@ -23,4 +23,6 @@ public class Image {
 	@JoinColumn( name = "producto_id", nullable = false )
 	@JsonIgnoreProperties({"id", "active", "images"})
 	private Product product;
+	@Column( name = "activo", nullable = false )
+	private boolean active;
 }
