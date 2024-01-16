@@ -3,6 +3,7 @@ package com.pokemonplace.app.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+
 @Setter
 @Getter
 @ToString
