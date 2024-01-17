@@ -2,10 +2,10 @@ package com.pokemonplace.app.entity;
 
 import java.sql.Timestamp;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.*;
 import lombok.*;
-
-
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -21,11 +21,15 @@ public class Shopping {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column (name= "compras_id", nullable= false)
 	private Long id;
-	@Column(name= "usuario_id", nullable= false)
-	private Long userId;
+	@ManyToOne
+	@JoinColumn(name= "usuario_id", nullable= false)
+	@JsonIgnoreProperties({"password", "roleId", "active"})
+	private User user;
 	@Column(name= "fecha_compra", length= 150)
 	private Timestamp date;
-	@Column(name= "estado_id", nullable= false)
-	private Long status;
+	@ManyToOne
+	@JoinColumn(name= "estado_id", nullable= false)
+	@JsonIgnoreProperties("statusId")
+	private Status status;
 
 }

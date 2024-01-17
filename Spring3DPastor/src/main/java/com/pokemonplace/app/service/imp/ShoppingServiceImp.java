@@ -41,7 +41,7 @@ public class ShoppingServiceImp implements ShoppingService{
 	public Shopping updateShopping(Shopping shopping, Long id) {
 		Shopping existingShopping = getShoppingById(id);
 		
-		existingShopping.setUserId(shopping.getUserId());
+		existingShopping.setUser(shopping.getUser());
 		existingShopping.setDate(shopping.getDate());
 		existingShopping.setStatus(shopping.getStatus());
 		
