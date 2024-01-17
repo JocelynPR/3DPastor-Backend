@@ -68,6 +68,8 @@ public class UserDtoServiceImp implements UserDtoService{
 		userDto.setFullName(user.getFullName());
 		userDto.setEmail(user.getEmail());
 		userDto.setPhone(user.getPhone());
+		userDto.setAddress(user.getAddress());
+		userDto.setOrders(user.getOrders());
 		return userDto;
 	}
 

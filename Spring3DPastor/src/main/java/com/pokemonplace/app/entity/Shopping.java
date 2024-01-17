@@ -23,7 +23,7 @@ public class Shopping {
 	private Long id;
 	@ManyToOne
 	@JoinColumn(name= "usuario_id", nullable= false)
-	@JsonIgnoreProperties({"password", "roleId", "active"})
+	@JsonIgnoreProperties({"password", "roleId", "active", "orders"})
 	private User user;
 	@Column(name= "fecha_compra", length= 150)
 	private Timestamp date;

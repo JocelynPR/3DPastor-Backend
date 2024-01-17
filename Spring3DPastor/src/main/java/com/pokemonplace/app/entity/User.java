@@ -1,5 +1,9 @@
 package com.pokemonplace.app.entity;
 
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -29,4 +33,8 @@ public class User {
 	private long roleId = 2;
 	@Column(name= "activo", nullable= false)
 	private boolean active;
+	@OneToMany(mappedBy="user")
+	@JsonIgnoreProperties("user")
+	private List<Shopping> orders;
+	
 }
