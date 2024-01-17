@@ -3,7 +3,7 @@ package com.pokemonplace.app.dto;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.pokemonplace.app.entity.Shopping;
+import com.pokemonplace.app.info.ShoppingInfoForUserEntity;
 
 import lombok.*;
 
@@ -19,5 +19,5 @@ public class UserDto {
 	private String phone;
 	private String address;
 	@JsonIgnoreProperties("user")
-	private List<Shopping> orders;
+	private List<ShoppingInfoForUserEntity> orders;
 }

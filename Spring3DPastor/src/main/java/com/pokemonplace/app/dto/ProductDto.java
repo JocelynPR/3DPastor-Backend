@@ -20,7 +20,7 @@ public class ProductDto {
 	@JsonIgnoreProperties("categoryId")
 	private Category category;
 	private Long availableQty;
-	@JsonIgnoreProperties({"imageId", "product"})
+	@JsonIgnoreProperties({"imageId", "product", "active"})
 	private List<Image> image;
 
 }

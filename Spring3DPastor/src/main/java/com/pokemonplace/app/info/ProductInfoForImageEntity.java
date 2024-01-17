@@ -1,8 +1,10 @@
-package com.pokemonplace.app.entity;
+package com.pokemonplace.app.info;
 
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.pokemonplace.app.entity.Category;
+import com.pokemonplace.app.entity.Image;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -14,7 +16,7 @@ import lombok.*;
 @NoArgsConstructor
 @Entity
 @Table(name="productos")
-public class Product {
+public class ProductInfoForImageEntity {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -29,7 +31,7 @@ public class Product {
 	@JsonIgnoreProperties("categoryId")
 	private Category category;
 	@Column(name="cantidad_disponible", nullable= false)
-	private Long qty;
+	private Long availableQty;
 	@Column(name="activo", nullable=false)
 	private boolean active = true;
 	@OneToMany(mappedBy = "product")

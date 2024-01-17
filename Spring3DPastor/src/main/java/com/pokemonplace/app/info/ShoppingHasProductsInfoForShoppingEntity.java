@@ -1,9 +1,8 @@
-package com.pokemonplace.app.entity;
+package com.pokemonplace.app.info;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.pokemonplace.app.entity.Shopping;
 import com.pokemonplace.app.entity.compositeKey.ShoppingProductKey;
-import com.pokemonplace.app.info.ProductInfoForShoppingHasProducts;
-import com.pokemonplace.app.info.ShoppingInfoForShoppingHasProducts;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -15,24 +14,23 @@ import lombok.*;
 @ToString
 @Entity
 @Table(name="compras_has_productos")
-public class ShoppingHasProducts {
+public class ShoppingHasProductsInfoForShoppingEntity {
 
 	@EmbeddedId 
 	ShoppingProductKey id;
 
 	@Column( name = "cantidad_compra")
-	private int quantity;
+	private int purchasedQty;
 
 	@JoinColumn (name = "compras_id")
 	@ManyToOne
 	@MapsId("shoppingId" )
-	@JsonIgnoreProperties({"id", "products"})
-	private ShoppingInfoForShoppingHasProducts shopping;
+	private Shopping shopping;
 
 	@JoinColumn (name = "productos_id")
 	@ManyToOne
 	@MapsId("productId" )
 	@JsonIgnoreProperties({"id", "qty", "active"})
-	private ProductInfoForShoppingHasProducts product;
+	private ProductInfoForShoppingEntity product;
 
 }

@@ -1,11 +1,11 @@
-package com.pokemonplace.app.entity;
+package com.pokemonplace.app.info;
 
 import java.sql.Timestamp;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.pokemonplace.app.info.ShoppingHasProductsInfoForShoppingEntity;
-import com.pokemonplace.app.info.UserInfoForShoppingEntity;
+import com.pokemonplace.app.entity.ShoppingHasProducts;
+import com.pokemonplace.app.entity.Status;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -18,7 +18,7 @@ import lombok.*;
 @Entity
 @Table(name="compras")
 
-public class Shopping {
+public class ShoppingInfoForShoppingHasProducts {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -27,7 +27,7 @@ public class Shopping {
 	@ManyToOne
 	@JoinColumn(name= "usuario_id", nullable= false)
 	@JsonIgnoreProperties({"password", "roleId", "active", "orders"})
-	private UserInfoForShoppingEntity user;
+	private UserInfoForShoppingHasProducts user;
 	@Column(name= "fecha_compra", length= 150)
 	private Timestamp date;
 	@ManyToOne
@@ -35,7 +35,6 @@ public class Shopping {
 	@JsonIgnoreProperties("statusId")
 	private Status status;
 	@OneToMany(mappedBy="shopping")
-	@JsonIgnoreProperties({"id", "shopping"})
-	private List<ShoppingHasProductsInfoForShoppingEntity> products;
+	private List<ShoppingHasProducts> products;
 
 }

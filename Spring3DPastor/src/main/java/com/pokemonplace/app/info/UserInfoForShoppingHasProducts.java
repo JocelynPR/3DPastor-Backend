@@ -1,9 +1,6 @@
-package com.pokemonplace.app.entity;
+package com.pokemonplace.app.info;
 
 import java.util.List;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.pokemonplace.app.info.ShoppingInfoForUserEntity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -15,7 +12,7 @@ import lombok.*;
 @ToString
 @Entity
 @Table(name="usuarios")
-public class User {
+public class UserInfoForShoppingHasProducts {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column (name= "usuario_id", nullable= false)
@@ -35,7 +32,6 @@ public class User {
 	@Column(name= "activo", nullable= false)
 	private boolean active;
 	@OneToMany(mappedBy="user")
-	@JsonIgnoreProperties("user")
-	private List<ShoppingInfoForUserEntity> orders;
+	private List<ShoppingInfoForShoppingHasProducts> orders;
 	
 }
