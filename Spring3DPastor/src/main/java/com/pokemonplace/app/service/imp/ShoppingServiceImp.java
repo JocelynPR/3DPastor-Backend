@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 import com.pokemonplace.app.entity.*;
 import com.pokemonplace.app.repository.ShoppingRepository;
-import com.pokemonplace.app.repository.UserRepository;
 import com.pokemonplace.app.service.ShoppingService;
 
 @Service

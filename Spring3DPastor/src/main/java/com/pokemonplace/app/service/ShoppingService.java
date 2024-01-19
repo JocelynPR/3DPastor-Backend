@@ -4,7 +4,6 @@ import java.sql.Timestamp;
 import java.util.List;
 
 import com.pokemonplace.app.entity.Shopping;
-import com.pokemonplace.app.entity.User;
 
 public interface ShoppingService {
 	
