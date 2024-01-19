@@ -37,5 +37,6 @@ public class Shopping {
 	@OneToMany(mappedBy="shopping")
 	@JsonIgnoreProperties({"id", "shopping"})
 	private List<ShoppingHasProductsInfoForShoppingEntity> products;
+	
 
 }

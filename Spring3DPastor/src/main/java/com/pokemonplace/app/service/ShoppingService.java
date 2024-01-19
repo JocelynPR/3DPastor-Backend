@@ -1,8 +1,10 @@
 package com.pokemonplace.app.service;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 import com.pokemonplace.app.entity.Shopping;
+import com.pokemonplace.app.entity.User;
 
 public interface ShoppingService {
 	
@@ -11,5 +13,5 @@ public interface ShoppingService {
 	Shopping createShopping(Shopping shopping);
 	Shopping updateShopping(Shopping shopping, Long id);
 	void deleteShopping(Long id);
-
+	List<Shopping> getAllShoppings();
 }

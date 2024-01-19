@@ -10,5 +10,6 @@ import com.pokemonplace.app.entity.Product;
 public interface ProductRepository extends CrudRepository<Product, Long>{
 	
 	Optional<Product>findByNameProduct(String nameProduct);
-	Iterable<Product>findAllByActive(boolean state);
+	// Antes boolean state
+	Iterable<Product>findAllByActive(boolean Active);
 }

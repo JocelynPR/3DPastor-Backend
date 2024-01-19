@@ -1,6 +1,7 @@
 package com.pokemonplace.app.service.imp;
 
 import java.sql.Timestamp;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.pokemonplace.app.entity.*;
 import com.pokemonplace.app.repository.ShoppingRepository;
+import com.pokemonplace.app.repository.UserRepository;
 import com.pokemonplace.app.service.ShoppingService;
 
 @Service
@@ -46,6 +48,12 @@ public class ShoppingServiceImp implements ShoppingService{
 		existingShopping.setStatus(shopping.getStatus());
 		
 		return shoppingRepository.save(existingShopping);
+	}
+	
+	@Override
+	public List<Shopping> getAllShoppings(){
+		List<Shopping> shoppings = (List<Shopping>) shoppingRepository.findAll();
+		return shoppings;
 	}
 
 	@Override

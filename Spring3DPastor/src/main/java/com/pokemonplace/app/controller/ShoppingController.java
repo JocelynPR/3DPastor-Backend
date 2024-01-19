@@ -1,6 +1,7 @@
 package com.pokemonplace.app.controller;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -29,6 +30,13 @@ public class ShoppingController {
 
 	@Autowired
 	ShoppingService shoppingService;
+	
+	// Modifications
+	@GetMapping
+	List<Shopping> getAllShoppings(){
+		List<Shopping> shoppings = shoppingService.getAllShoppings();
+		return shoppings;
+	}
 	
 	@GetMapping("{id}")
 	Shopping getShoppingById(@PathVariable(name= "id") Long id) {
@@ -61,5 +69,4 @@ public class ShoppingController {
 		return "Se eliminó la compra con el id= " +id;
 	}
 	
-
 }
