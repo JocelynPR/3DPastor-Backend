@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.pokemonplace.app.Spring3DPastorApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-17T18:27:24" hostname="POYO" time="6.314">
+<testsuite name="com.pokemonplace.app.Spring3DPastorApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-19T20:39:08" hostname="POYO" time="3.718">
   <properties/>
-  <testcase name="contextLoads()" classname="com.pokemonplace.app.Spring3DPastorApplicationTests" time="6.314"/>
-  <system-out><![CDATA[12:27:02.559 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.pokemonplace.app.Spring3DPastorApplicationTests]: Spring3DPastorApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-12:27:03.071 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.pokemonplace.app.Spring3DPastorApplication for test class com.pokemonplace.app.Spring3DPastorApplicationTests
+  <testcase name="contextLoads()" classname="com.pokemonplace.app.Spring3DPastorApplicationTests" time="3.718"/>
+  <system-out><![CDATA[14:38:47.456 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.pokemonplace.app.Spring3DPastorApplicationTests]: Spring3DPastorApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:38:47.938 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.pokemonplace.app.Spring3DPastorApplication for test class com.pokemonplace.app.Spring3DPastorApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -13,123 +13,22 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.1)
 
-2024-01-17T12:27:04.885-06:00  INFO 9552 --- [    Test worker] c.p.app.Spring3DPastorApplicationTests   : Starting Spring3DPastorApplicationTests using Java 17.0.9 with PID 9552 (started by Usuario in C:\generation\Proyecto Integrador\3DPastor-Backend\Spring3DPastor)
-2024-01-17T12:27:04.889-06:00  INFO 9552 --- [    Test worker] c.p.app.Spring3DPastorApplicationTests   : The following 1 profile is active: "${PROFILE}"
-2024-01-17T12:27:08.269-06:00  INFO 9552 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-01-17T12:27:08.574-06:00  INFO 9552 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 281 ms. Found 6 JPA repository interfaces.
-2024-01-17T12:27:11.177-06:00  INFO 9552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-01-17T12:27:12.040-06:00  INFO 9552 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:7c27c1c6-5dd4-48fc-992d-e5d971d6a6a5 user=SA
-2024-01-17T12:27:12.071-06:00  INFO 9552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-01-17T12:27:12.381-06:00  INFO 9552 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-01-17T12:27:12.835-06:00  INFO 9552 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2024-01-17T12:27:13.073-06:00  INFO 9552 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-01-17T12:27:14.393-06:00  INFO 9552 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-01-17T12:27:19.157-06:00  INFO 9552 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-01-17T12:27:19.194-06:00 DEBUG 9552 --- [    Test worker] org.hibernate.SQL                        : 
-    drop table if exists categorias cascade 
-2024-01-17T12:27:19.201-06:00 DEBUG 9552 --- [    Test worker] org.hibernate.SQL                        : 
-    drop table if exists compras cascade 
-2024-01-17T12:27:19.201-06:00 DEBUG 9552 --- [    Test worker] org.hibernate.SQL                        : 
-    drop table if exists compras_has_productos cascade 
-2024-01-17T12:27:19.202-06:00 DEBUG 9552 --- [    Test worker] org.hibernate.SQL                        : 
-    drop table if exists estado_compra cascade 
-2024-01-17T12:27:19.203-06:00 DEBUG 9552 --- [    Test worker] org.hibernate.SQL                        : 
-    drop table if exists imagenes_productos cascade 
-2024-01-17T12:27:19.203-06:00 DEBUG 9552 --- [    Test worker] org.hibernate.SQL                        : 
-    drop table if exists productos cascade 
-2024-01-17T12:27:19.204-06:00 DEBUG 9552 --- [    Test worker] org.hibernate.SQL                        : 
-    drop table if exists usuarios cascade 
-2024-01-17T12:27:19.213-06:00 DEBUG 9552 --- [    Test worker] org.hibernate.SQL                        : 
-    create table categorias (
-        categoria_id bigint generated by default as identity,
-        nombre_categoria varchar(45) not null,
-        primary key (categoria_id)
-    )
-2024-01-17T12:27:19.230-06:00 DEBUG 9552 --- [    Test worker] org.hibernate.SQL                        : 
-    create table compras (
-        compras_id bigint generated by default as identity,
-        estado_id bigint not null,
-        fecha_compra timestamp(6),
-        usuario_id bigint not null,
-        primary key (compras_id)
-    )
-2024-01-17T12:27:19.232-06:00 DEBUG 9552 --- [    Test worker] org.hibernate.SQL                        : 
-    create table compras_has_productos (
-        cantidad_compra integer,
-        compras_id bigint not null,
-        productos_id bigint not null,
-        primary key (compras_id, productos_id)
-    )
-2024-01-17T12:27:19.238-06:00 DEBUG 9552 --- [    Test worker] org.hibernate.SQL                        : 
-    create table estado_compra (
-        estado_id bigint generated by default as identity,
-        estado_compra varchar(60) not null,
-        primary key (estado_id)
-    )
-2024-01-17T12:27:19.240-06:00 DEBUG 9552 --- [    Test worker] org.hibernate.SQL                        : 
-    create table imagenes_productos (
-        activo boolean not null,
-        imagen_id bigint generated by default as identity,
-        producto_id bigint not null,
-        nombre_imagen varchar(120) not null,
-        primary key (imagen_id)
-    )
-2024-01-17T12:27:19.249-06:00 DEBUG 9552 --- [    Test worker] org.hibernate.SQL                        : 
-    create table productos (
-        activo boolean not null,
-        precio float(24) not null,
-        cantidad_disponible bigint not null,
-        categoria_id bigint not null,
-        producto_id bigint generated by default as identity,
-        nombre_producto varchar(200) not null unique,
-        primary key (producto_id)
-    )
-2024-01-17T12:27:19.257-06:00 DEBUG 9552 --- [    Test worker] org.hibernate.SQL                        : 
-    create table usuarios (
-        activo boolean not null,
-        rol_id bigint not null,
-        usuario_id bigint generated by default as identity,
-        contrasena varchar(20) not null,
-        telefono varchar(20) not null,
-        email varchar(60) not null unique,
-        usuario_nombre varchar(120) not null,
-        direccion varchar(150),
-        primary key (usuario_id)
-    )
-2024-01-17T12:27:19.262-06:00 DEBUG 9552 --- [    Test worker] org.hibernate.SQL                        : 
-    alter table if exists compras 
-       add constraint FKiq9pfujcne6vqmdxb60hxgwnk 
-       foreign key (estado_id) 
-       references estado_compra
-2024-01-17T12:27:19.288-06:00 DEBUG 9552 --- [    Test worker] org.hibernate.SQL                        : 
-    alter table if exists compras 
-       add constraint FK4lnkw9964v2gf3b2sjbaealqw 
-       foreign key (usuario_id) 
-       references usuarios
-2024-01-17T12:27:19.292-06:00 DEBUG 9552 --- [    Test worker] org.hibernate.SQL                        : 
-    alter table if exists compras_has_productos 
-       add constraint FK3u4xk2vqqmo75h3np7a4iu2jb 
-       foreign key (productos_id) 
-       references productos
-2024-01-17T12:27:19.297-06:00 DEBUG 9552 --- [    Test worker] org.hibernate.SQL                        : 
-    alter table if exists compras_has_productos 
-       add constraint FK4sbxw5p4aornt8kxyypa7so6d 
-       foreign key (compras_id) 
-       references compras
-2024-01-17T12:27:19.301-06:00 DEBUG 9552 --- [    Test worker] org.hibernate.SQL                        : 
-    alter table if exists imagenes_productos 
-       add constraint FKit49va58jtu1j3j977paiayhu 
-       foreign key (producto_id) 
-       references productos
-2024-01-17T12:27:19.305-06:00 DEBUG 9552 --- [    Test worker] org.hibernate.SQL                        : 
-    alter table if exists productos 
-       add constraint FK2fwq10nwymfv7fumctxt9vpgb 
-       foreign key (categoria_id) 
-       references categorias
-2024-01-17T12:27:19.334-06:00  INFO 9552 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-01-17T12:27:22.568-06:00  WARN 9552 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-01-17T12:27:22.645-06:00  INFO 9552 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2024-01-17T12:27:24.849-06:00  INFO 9552 --- [    Test worker] c.p.app.Spring3DPastorApplicationTests   : Started Spring3DPastorApplicationTests in 21.001 seconds (process running for 26.048)
+2024-01-19T14:38:50.347-06:00  INFO 19244 --- [    Test worker] c.p.app.Spring3DPastorApplicationTests   : Starting Spring3DPastorApplicationTests using Java 17.0.9 with PID 19244 (started by Usuario in C:\generation\Proyecto Integrador\3DPastor-Backend\Spring3DPastor)
+2024-01-19T14:38:50.350-06:00  INFO 19244 --- [    Test worker] c.p.app.Spring3DPastorApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2024-01-19T14:38:52.482-06:00  INFO 19244 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-19T14:38:52.658-06:00  INFO 19244 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 147 ms. Found 6 JPA repository interfaces.
+2024-01-19T14:38:54.148-06:00  INFO 19244 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-19T14:38:56.315-06:00  INFO 19244 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2abc55c4
+2024-01-19T14:38:56.319-06:00  INFO 19244 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-19T14:38:56.435-06:00  INFO 19244 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-19T14:38:56.653-06:00  INFO 19244 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-01-19T14:38:56.879-06:00  INFO 19244 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-01-19T14:38:58.290-06:00  INFO 19244 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-19T14:39:02.979-06:00  INFO 19244 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-19T14:39:02.988-06:00  INFO 19244 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-19T14:39:05.617-06:00  WARN 19244 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-19T14:39:05.708-06:00  INFO 19244 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-01-19T14:39:07.861-06:00  INFO 19244 --- [    Test worker] c.p.app.Spring3DPastorApplicationTests   : Started Spring3DPastorApplicationTests in 18.99 seconds (process running for 24.369)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
