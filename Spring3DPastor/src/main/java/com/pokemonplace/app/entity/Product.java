@@ -24,10 +24,10 @@ public class Product {
 	private String nameProduct;
 	@Column(name="precio", nullable= false)
 	private float price;
-	@ManyToOne
-	@JoinColumn(name="categoria_id", nullable= false)
-	@JsonIgnoreProperties("categoryId")
-	private Category category;
+	@ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "categoria_id", nullable = false)
+    @JsonIgnoreProperties("categoryId")
+    private Category category;
 	@Column(name="cantidad_disponible", nullable= false)
 	private Long qty;
 	@Column(name="activo", nullable=false)
