@@ -32,4 +32,4 @@ Equipo
 
 Visítanos
 
- https://jocelynpr.github.io/3D-Pastor/#/Contacto
+ https://jocelynpr.github.io/3D-Pastor/
