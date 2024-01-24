@@ -29,3 +29,7 @@ Equipo
 * Misael Edgar Zepeda Díaz
 * Jorge Alberto Ramírez Casillas
 * Antonio Gonzalez Navarrete
+
+Visítanos
+
+ https://jocelynpr.github.io/3D-Pastor/#/Contacto
