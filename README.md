@@ -1,3 +1,6 @@
+
+![pokemon place](https://github.com/JocelynPR/3DPastor-Backend/assets/47506916/4cefeff2-632d-43b5-a646-479e7f3e3383)
+
 Pokemon Place - Backend
 
  ¡Bienvenido a Pokemon Place! Este es el repositorio del backend de nuestro e-commerce enfocado en ofrecer productos de calidad de la franquicia Pokémon. Aquí encontrarás toda la información necesaria para comprender la estructura del backend que ha sido desarrollado utilizando Java y Spring Boot.
