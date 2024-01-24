@@ -8,7 +8,7 @@
 
 Estructura del proyecto
 
- El proyecto del backend de DevMura sigue una estructura de directorios bien organizada:
+ El proyecto sigue una estructura de directorios bien organizada:
 
 * src/main/java: Contiene el código fuente de la aplicación Java.
 * config: Contiene las clases de configuración de Spring.
