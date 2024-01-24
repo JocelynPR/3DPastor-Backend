@@ -1,0 +1,27 @@
+Pokemon Place - Backend
+
+ ¡Bienvenido a Pokemon Place! Este es el repositorio del backend de nuestro e-commerce enfocado en ofrecer productos de calidad de la franquicia Pokémon. Aquí encontrarás toda la información necesaria para comprender la estructura del backend que ha sido desarrollado utilizando Java y Spring Boot.
+
+Estructura del proyecto
+
+ El proyecto del backend de DevMura sigue una estructura de directorios bien organizada:
+
+* src/main/java: Contiene el código fuente de la aplicación Java.
+* config: Contiene las clases de configuración de Spring.
+* controllers: Contiene los controladores de la API REST.
+* models: Contiene las clases de modelo que representan las entidades de la base de datos.
+* repositories: Contiene las interfaces de repositorio que definen las operaciones de acceso a datos.
+* services: Contiene los servicios de negocio que interactúan con los repositorios y realizan la lógica de la aplicación.
+* src/main/resources: Contiene los archivos de configuración y recursos adicionales.
+* application.properties: Archivo de configuración principal de Spring Boot.
+* schema.sql: Archivo que define el esquema de la base de datos.
+
+Equipo
+
+ Este e-commerce fue desarrollado por:
+
+* Mirta Adriana Tapia Don
+* Jocelyn Karina Peña Reyes
+* Misael Edgar Zepeda Díaz
+* Jorge Alberto Ramírez Casillas
+* Antonio Gonzalez Navarrete
