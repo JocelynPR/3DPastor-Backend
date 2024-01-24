@@ -4,7 +4,7 @@
 
  ¡Bienvenido a Pokemon Place!
  
- Este es el repositorio del backend de nuestro e-commerce enfocado en ofrecer productos de calidad de la franquicia Pokémon. Aquí encontrarás toda la información necesaria para comprender la estructura del backend que ha sido desarrollado utilizando Java y Spring Boot.
+ Este es el repositorio del BackEnd de nuestro e-commerce enfocado en ofrecer productos de calidad de la franquicia Pokémon. Aquí encontrarás toda la información necesaria para comprender la estructura del backend que ha sido desarrollado utilizando Java y Spring Boot.
 
 Estructura del proyecto
 
